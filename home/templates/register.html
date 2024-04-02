@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block start %}
+<body>
+    <section>
+        <div class="login-page">
+            <div class="form">
+
+                <!-- Register Form -->
+                <form class="register-form"  method="POST">
+                    {% csrf_token %} 
+                    <input type="text" placeholder="name" name="username"/>
+                    <input type="password" placeholder="password" name="userpswd"/>
+                    <input type="text" placeholder="email address" name="useremail"/>
+                    <button>create</button>
+                    <p class="message">Already registered? <a href="/login">Sign In</a></p>
+                </form>
+
+            </div>
+        </div>
+    </section>
+ 
+</body> 
+{% endblock %}
